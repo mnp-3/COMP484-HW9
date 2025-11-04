@@ -154,3 +154,10 @@ if (typeof dataInput === "number"){
     console.log(typeof dataInput);
 }
 
+//Exercise 20: Simulating DOM Manipulation Timing Failure (Conceptual)
+document.body.innerHTML = "<h1>Interactive Layer Loaded</h1>"
+
+/* 
+if this script is placed in the HTML `<head>` _without_ the `defer` or `async` attributes it 
+leads to the error "Cannot set property 'innerHTML' of null" because specific elemnts don't exist yet
+*/
