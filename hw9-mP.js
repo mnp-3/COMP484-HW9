@@ -123,4 +123,34 @@ function calculateRenderTime (){
 }
 
 //Exercise 17: Date Object Formatting Challenge (MM/DD/YYYY)
-var today = newDate;
+var today = new Date();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+var year = today.getFullYear();
+
+var formattedDate = "Today is " + month + "/" + day +"/" + year;
+console.log(formattedDate);
+
+//Exercise 18: Mixed Type Arithmetic Explanation
+var val1 = 20;
+var val2 = "5";
+
+var sumResult = val1 + val2;
+var diffResult = val1 - val2;
+
+console.log(sumResult);
+console.log(diffResult);
+/*
+'+' operator in JavaScript performs both addition and string concatenation resulting in 205 because "5" is a string
+'-' operator only performs numeric subtraction so the string "5" is turned into a number
+*/
+
+//Exercise 19: Conditional based on Type Check
+var dataInput = 484;
+if (typeof dataInput === "number"){
+    console.log("Input is numeric.");
+} else {
+    dataInput = true;
+    console.log(typeof dataInput);
+}
+
